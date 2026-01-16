@@ -16,4 +16,7 @@ describe("validmail tests", () => {
     it("should return false (contains a blank space)", () => {
         expect(validmail("einar.martinez student@vinci.be")).toBe(false);
     });
+    it("should return false (contains no text before @)", () => {
+        expect(validmail("@vinci.be")).toBe(false);
+    });
 });
