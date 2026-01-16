@@ -1,8 +1,6 @@
 export const validmail = (email:string) => {
-    if(!email.includes("@"))return false;
+    if(!email.includes("@") || email.includes(" "))return false;
     const dom = email.substring(email.lastIndexOf("@"));
-    if(!dom.includes("."))return false;
-    if(dom.endsWith("."))return false;
-    if(email.includes(" "))return false;
+    if(!dom.includes(".") || dom.endsWith("."))return false;
     return true;
 }
