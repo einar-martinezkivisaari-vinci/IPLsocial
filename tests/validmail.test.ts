@@ -7,4 +7,7 @@ describe("validmail tests", () => {
     it("should return false (no @)", () => {
         expect(validmail("einar.martinezstudent.vinci.be")).toBe(false);
     });
+    it("should return false (no . after @)", () => {
+        expect(validmail("einar.martinezstudent@vincibe")).toBe(false);
+    });
 });
